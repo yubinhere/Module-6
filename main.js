@@ -31,17 +31,17 @@ randomize.addEventListener('click', result);
 function result() {
 
   var newStory = storyText;
-  let xItem = randomValueFromArray (insertx);
-    let yItem = randomValueFromArray (inserty);
-      let zItem = randomValueFromArray (insertz);
+  var xItem = randomValueFromArray (insertx);
+  var yItem = randomValueFromArray (inserty);
+  var zItem = randomValueFromArray (insertz);
 
   newStory= newStory.replace (':insertx:',xItem);
     newStory= newStory.replace (':inserty:',yItem);
       newStory= newStory.replace (':insertz:',zItem);
 
-  if(customName.value !== '') {
+  if(customName.value != ") {
     var name = customName.value;
-    storyText= storyText.replace ('Bob',name);
+    newStoryt= newStory.replace ('Bob',name);
 
   }
 
@@ -52,10 +52,6 @@ function result() {
     var newStory= newStory.replace ('300 pounds',weight);
 
   }
-
-
-
-
 
   story.textContent = newStory;
   story.style.visibility = 'visible';
