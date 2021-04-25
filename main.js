@@ -12,17 +12,11 @@ function randomValueFromArray(array){
 
 var storyText = “It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.";
 
-var insertx= ['Willy the Goblin',
-'Big Daddy',
-'Father Christmas'];
+var insertx= ['Willy the Goblin','Big Daddy','Father Christmas'];
 
-var inserty= ['the soup kitchen',
-'Disneyland',
-'the White House'];
+var inserty= ['the soup kitchen','Disneyland','the White House'];
 
-var insertz= ['spontaneously combusted',
-'melted into a puddle on the sidewalk',
-'turned into a slug and crawled away'];
+var insertz= ['spontaneously combusted','melted into a puddle on the sidewalk','turned into a slug and crawled away'];
 
 3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION
 
@@ -30,16 +24,16 @@ randomize.addEventListener('click', result);
 
 function result() {
 
-  var newStory = storyText;
-  var xItem = randomValueFromArray (insertx);
-  var yItem = randomValueFromArray (inserty);
-  var zItem = randomValueFromArray (insertz);
+  let newStory = storyText;
+  let xItem = randomValueFromArray (insertx);
+  let yItem = randomValueFromArray (inserty);
+  let zItem = randomValueFromArray (insertz);
 
   newStory= newStory.replace (':insertx:',xItem);
     newStory= newStory.replace (':inserty:',yItem);
       newStory= newStory.replace (':insertz:',zItem);
 
-  if(customName.value != ") {
+  if(customName.value !== '') {
     var name = customName.value;
     newStoryt= newStory.replace ('Bob',name);
 
@@ -48,8 +42,8 @@ function result() {
   if(document.getElementById("uk").checked) {
     var weight = Math.round(300*0.0714286)+ 'stone';
     var temperature =  Math.round(94-32)*5/9) + 'centigrade';
-    var newStory= newStory.replace ('94 fahrenheit', temperature);
-    var newStory= newStory.replace ('300 pounds',weight);
+    newStory= newStory.replace ('94 fahrenheit', temperature);
+    newStory= newStory.replace ('300 pounds',weight);
 
   }
 
