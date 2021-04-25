@@ -1,8 +1,8 @@
 1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS
 
-var customName = document.getElementById('customname');
-var randomize = document.querySelector('.randomize');
-var story = document.querySelector('.story');
+const customName = document.getElementById('customname');
+const randomize = document.querySelector('.randomize');
+const story = document.querySelector('.story');
 
 function randomValueFromArray(array){
   return array[Math.floor(Math.random()*array.length)];
@@ -34,14 +34,14 @@ function result() {
       newStory= newStory.replace (':insertz:',zItem);
 
   if(customName.value !== '') {
-    var name = customName.value;
+    const name = customName.value;
     newStoryt= newStory.replace ('Bob',name);
 
   }
 
   if(document.getElementById("uk").checked) {
-    var weight = Math.round(300*0.0714286)+ 'stone';
-    var temperature =  Math.round(94-32)*5/9) + 'centigrade';
+    const weight = Math.round(300*0.0714286)+ 'stone';
+    const temperature =  Math.round(94-32)*5/9) + 'centigrade';
     newStory= newStory.replace ('94 fahrenheit', temperature);
     newStory= newStory.replace ('300 pounds',weight);
 
